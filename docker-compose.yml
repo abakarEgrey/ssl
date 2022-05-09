@@ -1,0 +1,61 @@
+version: '3.5'
+
+networks:
+  integration:
+
+volumes:
+  ssl-db:            
+    name: ssl-db
+  ssl-pgadmin:            
+    name: ssl-pgadmin
+
+services:
+  # services
+  ssl-service:
+    container_name: ssl-service
+    image: 'ssl-service-postgres:latest'
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+   
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=ssl
+      #- SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      
+    networks:
+      - integration
+
+  # Data base image
+
+  db:
+    container_name: db
+    image: postgres:14.2
+    ports:
+      - "5432:5432"
+    environment:
+      #- POSTGRES_USER=ssl
+      - POSTGRES_PASSWORD=ssl
+      #- POSTGRES_DB=SSL
+    volumes:
+      - ./scripts:/scripts
+      - ssl-db:/var/lib/postgresql/data
+    networks:
+      - integration
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    volumes:
+      - ssl-pgadmin:/var/lib/pgadmin
+    environment:
+      - "PGADMIN_DEFAULT_EMAIL=ssl@swisscom.ch"
+      - "PGADMIN_DEFAULT_PASSWORD=ssl"
+    ports:
+      - "9999:80"
+    networks:
+      - integration
