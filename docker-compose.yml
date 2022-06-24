@@ -1,4 +1,4 @@
-version: '3.5'
+version: '3.6'
 
 networks:
   integration:
@@ -39,7 +39,8 @@ services:
       - "5432:5432"
     environment:
       #- POSTGRES_USER=ssl
-      - POSTGRES_PASSWORD=ssl
+      #- POSTGRES_PASSWORD=ssl
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres-passwd
       #- POSTGRES_DB=SSL
     volumes:
       - ./scripts:/scripts
@@ -59,3 +60,7 @@ services:
       - "9999:80"
     networks:
       - integration
+
+secrets:
+  postgres-passwd:
+    file: ./db_secret.txt
