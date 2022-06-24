@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+      maven 'MAVEN_HOME'
+    }
     stages {
         stage('checkout') {
             steps {
@@ -11,6 +14,7 @@ pipeline {
         stage('build and test') {
             steps {
                 echo 'build and test'
+                sh "chmod +x -R ${env.WORKSPACE}"
                 sh './build.sh'
             }
         }
