@@ -11,6 +11,7 @@ pipeline {
         stage('build and test') {
             steps {
                 echo 'build and test'
+                sh './build.sh'
             }
         }
 
