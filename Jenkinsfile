@@ -22,7 +22,8 @@ pipeline {
         stage('dockerize application') {
             steps {
                 echo 'build application image'
-                sh ''
+                sh "chmod +x -R ${env.WORKSPACE}"
+                sh './buildImage.sh'
             }
         }
 
