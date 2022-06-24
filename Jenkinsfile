@@ -19,6 +19,13 @@ pipeline {
             }
         }
 
+        stage('dockerize application') {
+            steps {
+                echo 'build application image'
+                sh ''
+            }
+        }
+
         stage('deploy') {
             steps {
                 echo 'deploy'
