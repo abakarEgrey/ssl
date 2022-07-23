@@ -1,10 +1,10 @@
-package com.swisscom.ssl.service;
+package com.egreycom.ssl.service;
 
-import com.swisscom.ssl.data.SSLInformationRepository;
-import com.swisscom.ssl.data.domain.SSLInformation;
-import com.swisscom.ssl.service.dtos.SSLInformationDTO;
-import com.swisscom.ssl.service.dtos.SSLInformationInputDTO;
-import com.swisscom.ssl.service.dtos.mapper.SSLInformationMapper;
+import com.egreycom.ssl.data.SSLInformationRepository;
+import com.egreycom.ssl.data.domain.SSLInformation;
+import com.egreycom.ssl.service.dtos.SSLInformationDTO;
+import com.egreycom.ssl.service.dtos.SSLInformationInputDTO;
+import com.egreycom.ssl.service.dtos.mapper.SSLInformationMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.mapstruct.factory.Mappers;
@@ -12,7 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import javax.annotation.PostConstruct;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;

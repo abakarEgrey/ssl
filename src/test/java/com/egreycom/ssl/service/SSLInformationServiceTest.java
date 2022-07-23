@@ -1,9 +1,9 @@
-package com.swisscom.ssl.service;
+package com.egreycom.ssl.service;
 
-import com.swisscom.ssl.data.SSLInformationRepository;
-import com.swisscom.ssl.data.domain.SSLInformation;
-import com.swisscom.ssl.service.dtos.SSLInformationDTO;
-import com.swisscom.ssl.service.dtos.SSLInformationInputDTO;
+import com.egreycom.ssl.data.SSLInformationRepository;
+import com.egreycom.ssl.service.dtos.SSLInformationDTO;
+import com.egreycom.ssl.service.dtos.SSLInformationInputDTO;
+import com.egreycom.ssl.data.domain.SSLInformation;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

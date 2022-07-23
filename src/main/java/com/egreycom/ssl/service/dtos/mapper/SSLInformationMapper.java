@@ -1,7 +1,7 @@
-package com.swisscom.ssl.service.dtos.mapper;
+package com.egreycom.ssl.service.dtos.mapper;
 
-import com.swisscom.ssl.data.domain.SSLInformation;
-import com.swisscom.ssl.service.dtos.SSLInformationDTO;
+import com.egreycom.ssl.service.dtos.SSLInformationDTO;
+import com.egreycom.ssl.data.domain.SSLInformation;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

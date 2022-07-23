@@ -1,4 +1,4 @@
-package com.swisscom.ssl.configuration;
+package com.egreycom.ssl.configuration;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;

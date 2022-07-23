@@ -1,8 +1,8 @@
-package com.swisscom.ssl.controller;
+package com.egreycom.ssl.controller;
 
-import com.swisscom.ssl.service.SSLInformationService;
-import com.swisscom.ssl.service.dtos.SSLInformationDTO;
-import com.swisscom.ssl.service.dtos.SSLInformationInputDTO;
+import com.egreycom.ssl.service.SSLInformationService;
+import com.egreycom.ssl.service.dtos.SSLInformationDTO;
+import com.egreycom.ssl.service.dtos.SSLInformationInputDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;

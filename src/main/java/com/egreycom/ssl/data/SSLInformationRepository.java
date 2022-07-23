@@ -1,6 +1,6 @@
-package com.swisscom.ssl.data;
+package com.egreycom.ssl.data;
 
-import com.swisscom.ssl.data.domain.SSLInformation;
+import com.egreycom.ssl.data.domain.SSLInformation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

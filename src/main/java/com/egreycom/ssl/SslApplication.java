@@ -1,4 +1,4 @@
-package com.swisscom.ssl;
+package com.egreycom.ssl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

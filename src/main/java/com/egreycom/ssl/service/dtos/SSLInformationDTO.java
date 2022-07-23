@@ -1,4 +1,4 @@
-package com.swisscom.ssl.service.dtos;
+package com.egreycom.ssl.service.dtos;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -12,6 +12,8 @@ import lombok.Setter;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @Builder
-public class SSLInformationInputDTO {
-    private String url;
+public class SSLInformationDTO {
+    private String subject;
+    private String issuer;
+    private String isValid;
 }

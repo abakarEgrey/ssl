@@ -1,4 +1,4 @@
-package com.swisscom.ssl.data.domain;
+package com.egreycom.ssl.data.domain;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
